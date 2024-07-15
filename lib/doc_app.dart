@@ -11,6 +11,7 @@ class DocApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
+      // width and height are from the desgin frame values
       designSize: const Size(375, 812),
       child: MaterialApp(
         title: 'Doc App',
