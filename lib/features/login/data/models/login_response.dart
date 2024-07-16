@@ -11,6 +11,7 @@ class LoginResponse {
 
   LoginResponse({this.message, this.userData, this.status, this.code});
 
+// using fromJson ( means fromJson to dart)
   factory LoginResponse.fromJson(Map<String, dynamic> json) =>
       _$LoginResponseFromJson(json);
 }
