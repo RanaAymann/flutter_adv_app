@@ -3,7 +3,7 @@ import 'package:flutter_adv_app/features/login/ui/widgets/terms_and_conditions.d
 import 'package:flutter_adv_app/features/sign_up/logic/sign_up_cubit.dart';
 import 'package:flutter_adv_app/features/sign_up/ui/widgets/already_have_account_text.dart';
 import 'package:flutter_adv_app/features/sign_up/ui/widgets/sign_up_form.dart';
-import 'package:flutter_adv_app/features/sign_up/ui/widgets/sing_up_bloc_listener.dart';
+import 'package:flutter_adv_app/features/sign_up/ui/widgets/sign_up_bloc_listener.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/helpers/spacing.dart';

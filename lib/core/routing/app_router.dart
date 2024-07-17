@@ -5,7 +5,7 @@ import 'package:flutter_adv_app/features/login/logic/cubit/login_cubit.dart';
 import 'package:flutter_adv_app/features/login/ui/login_screen.dart';
 import 'package:flutter_adv_app/features/onboarding/onboarding_screen.dart';
 import 'package:flutter_adv_app/features/sign_up/logic/sign_up_cubit.dart';
-import 'package:flutter_adv_app/features/sign_up/ui/signup_screen.dart';
+import 'package:flutter_adv_app/features/sign_up/ui/sign_up_screen.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../di/dependency_injection.dart';
 
