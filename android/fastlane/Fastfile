@@ -1,0 +1,21 @@
+
+default_platform(:android)
+
+platform :android do
+  # any description for the lane
+  desc "Lane for Android Firebase App Distribution"
+  #  lane name is firebase_distribution
+  lane :firebase_distribution do
+    # two commands to be done automatically : what i need this lane to do
+    sh "flutter clean"
+    sh "flutter build apk --release --flavor production --target lib/main_production.dart --no-tree-shake-icons"
+    firebase_app_distribution(
+        app: "1:979720031953:android:a9bf46cac8eb0b8900fff0",
+        firebase_cli_token: "1//036Lvwop7GHMlCgYIARAAGAMSNwF-L9IrfYUMv_fhpvIeCLEYrAqkJ0_ZcbMXMCNojOOEx1YxgZ0tVsy8tNsJpSJHZYhwlphukb0",
+       # android_artifact_type : "APK",
+        android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
+        testers: "ranabdulhay@gmail.com",
+        release_notes: "First Fastlane Firebase App Distribution"
+  )
+  end
+end

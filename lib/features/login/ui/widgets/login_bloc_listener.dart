@@ -8,7 +8,8 @@ import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/styles.dart';
 
 class LoginBlocListener extends StatelessWidget {
-  const LoginBlocListener({super.key});
+  const 
+  LoginBlocListener({super.key});
 
   @override
   Widget build(BuildContext context) {
