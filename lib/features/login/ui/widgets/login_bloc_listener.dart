@@ -21,7 +21,8 @@ class LoginBlocListener extends StatelessWidget {
         // whenOrNull from freezed
         // add action to each state response
         state.whenOrNull(
-          loading: () {
+          loading: () {    
+            
             showDialog(
               context: context,
               builder: (context) => const Center(
