@@ -1,14 +1,20 @@
+# Fastlane with GitHub Actions using ruby
+# any name for the file
 name: Android Fastlane with Firebase App Distribution Workflow
 
+# this workflow will work on master branch
 on:
   push:
     branches:
       - master
 
 jobs:
+  # distribute_to_firebase is optional name from GitHub
   distribute_to_firebase:
+    # ubuntu-latest bc will distribute android package
     runs-on: ubuntu-latest
     steps:
+      # name is optional as comment
       - name: Checkout my repo code
         uses: actions/checkout@v2
 
