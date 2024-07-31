@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_adv_app/core/helpers/spacing.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/theming/styles.dart';
+import '../../../../../core/theming/styles.dart';
 
 class DoctorsBlueContainer extends StatelessWidget {
   const DoctorsBlueContainer({super.key});
