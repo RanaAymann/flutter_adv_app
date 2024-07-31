@@ -14,15 +14,14 @@ class LoginBlocListener extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocListener<LoginCubit, LoginState>(
-      // start the listener if current states are:
+      // * start the listener if current states are:
       listenWhen: (previous, current) =>
           current is Loading || current is Success || current is Error,
       listener: (context, state) {
-        // whenOrNull from freezed
-        // add action to each state response
+        // * whenOrNull from freezed
+        // * add action to each state response
         state.whenOrNull(
           loading: () {    
-            
             showDialog(
               context: context,
               builder: (context) => const Center(
