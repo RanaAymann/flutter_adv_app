@@ -15,6 +15,7 @@ platform :android do
         android_artifact_type: "APK",
         android_artifact_path: "../build/app/outputs/flutter-apk/app-production-release.apk",
         testers: "ranabdulhay@gmail.com",
+        # change this note with each new release & app version in pubspec
         release_notes: "First Fastlane Firebase App Distribution"
   )
   end
