@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_adv_app/core/helpers/extensions.dart';
+import 'package:flutter_adv_app/core/networking/api_error_model.dart';
 import 'package:flutter_adv_app/features/sign_up/logic/sign_up_cubit.dart';
 import 'package:flutter_adv_app/features/sign_up/logic/sign_up_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,8 +34,8 @@ class SignUpBlocListener extends StatelessWidget {
             context.pop();
             showSuccessDialog(context);
           },
-          signUpError: (error) {
-            setupErrorState(context, error);
+          signUpError: (apiErrorModel) {
+            setupErrorState(context, apiErrorModel);
           },
         );
       },
@@ -62,6 +63,7 @@ class SignUpBlocListener extends StatelessWidget {
                 shadowColor: Colors.white,
                 backgroundColor: Colors.blue,
                 foregroundColor: Colors.grey,
+                disabledForegroundColor: Colors.grey.withOpacity(0.38),
               ),
               onPressed: () {
                 context.pushNamed(Routes.loginScreen);
@@ -73,7 +75,7 @@ class SignUpBlocListener extends StatelessWidget {
     );
   }
 
-  void setupErrorState(BuildContext context, String error) {
+  void setupErrorState(BuildContext context, ApiErrorModel apiErrorModel) {
     context.pop();
     showDialog(
       context: context,
@@ -84,7 +86,7 @@ class SignUpBlocListener extends StatelessWidget {
           size: 32,
         ),
         content: Text(
-          error,
+          apiErrorModel.getAllErrorMessages(),
           style: TextStyles.font15DarkBlueMedium,
         ),
         actions: [
