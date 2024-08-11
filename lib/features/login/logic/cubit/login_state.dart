@@ -1,3 +1,4 @@
+import 'package:flutter_adv_app/core/networking/api_error_model.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'login_state.freezed.dart';
@@ -7,7 +8,7 @@ class LoginState<T> with _$LoginState<T> {
   // initial state when creating the cubit will be private
   const factory LoginState.initial() = _Initial;
   // can access them in UI
-  const factory LoginState.loading() = Loading;
-  const factory LoginState.success(T data) = Success<T>;
-  const factory LoginState.error({required String error}) = Error;
+  const factory LoginState.loginLoading() = LoginLoading;
+  const factory LoginState.loginSuccess(T data) = LoginSuccess<T>;
+  const factory LoginState.loginError(ApiErrorModel apiErrorModel) = LoginError;
 }
